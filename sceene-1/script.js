@@ -62,10 +62,15 @@ function displayScene2b() {
   displayScene("scene-2b");
   positionItems(0.2, 0.1);
   setTimeout(() => {
-    displayScene("scene-2c");
-    const sceene = document.querySelector(`#${activeSceene}`);
-    sceene.style.display = "flex";
-    sceene.style.justifyContent = "center";
+    console.log("hiding scene", activeSceene);
+    // displayScene("scene-2c");
+    const getStarted = document.querySelector(`#getStarted`);
+    getStarted.style.display = "block";
+    getStarted.style.position = "absolute";
+    getStarted.style.margin = "unset";
+    getStarted.style.left = "50%";
+    getStarted.style.top = "10%";
+    getStarted.style.transform = "translate(-50%, 150%)";
   }, 5000);
 }
 function displayScene3() {
