@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="showIpad()">
+    <script>
+    function showIpad(){
+    const player=document.querySelector('.player')
+    player.classList='player visible'
+    }
+        </script>
+    <style>
+        body{
+            height: 100vh;
+            overflow: hidden;
+        }
+.player {
+    position: relative;
+    margin-top: 50px;
+  height: 80%;
+  width: 100%;
+  position: relative;
+  background-image: url(img/ipad.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 50px;
+  background-position: center;
+opacity: 0;
+}
+.visible {
+  position: absolute;
+  opacity: 1;
+  transition: all 2s;
+opacity: 1;
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  height: 80%;
+  display: grid;
+}
+
+    </style>
+            <div class='player'></div>
+</body>
+</html>

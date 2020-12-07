@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <tool-box>
+    </tool-box>
+    <content-box>
+    </content-box>
+    <layer-list>
+    </layer-list>
+</body>
+<script>
+    function Component(nodeName,body){
+        console.log(body)
+    let func=  new Function('...params',`consosole.log(${body})`)
+    console.log(func)
+return func
+    }
+   
+
+    function Image(...params){
+        let item= document.createElement('img')
+        params.forEach(([key,value])=>item[key]=value)
+        return item
+    }
+    let image = Image(
+        ['onmouseover',({target:item})=>item.src=item['data-over-img']],
+        ['onmouseout',({target:item})=>item.src=item['data-out-img']],
+        ['src','freezer.svg'],
+        ['className','pointer iki'],
+        ['data-over-img','freezer2.svg'],
+        ['data-out-img','freezer.svg']
+        )
+  const MyCustomComponent= Component('custom-tag' , {create:()=>{console.log('abc')}})
+//   const myComponent=MyCustomComponent('a','b','24')
+// document.body.appendChild(myComponent)
+document.body.appendChild(image)
+getMainClass=(value)=>HTMLElement
+class MyClass extends getMainClass('img'){
+constructor(){
+    super()
+}
+}
+customElements.define('abc-app',MyClass)
+let myClass= new Image(['width','250'])
+console.log(myClass)
+</script>
+<style>
+    .pointer{
+        cursor: pointer;
+    }
+    .iki{
+        width:550px
+    }
+</style>
+</html>

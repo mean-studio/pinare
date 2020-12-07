@@ -1,0 +1,42 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="276px" height="340px" viewBox="0 0 276 340">
+<defs>
+<filter id="Filter_1" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+<feFlood flood-color="#FFFF00" flood-opacity="1" in="SourceGraphic" result="result1"/>
+
+<feGaussianBlur in="SourceGraphic" stdDeviation="1.6666666666666667,1.6666666666666667" result="result2"/>
+
+<feComposite in2="result2" in="result1" operator="in" result="result3"/>
+
+<feComposite in2="result3" in="SourceGraphic" operator="over" result="result4"/>
+</filter>
+
+
+
+<g id="glow_labfrieezer1_14_Layer0_0_FILL">
+ <a xlink:href="javascript:console.log('asdas')" >
+<path fill="#FFFF00" fill-opacity="0.4980392156862745" stroke="none" d="
+M 91.9 24.9
+L 91 24.15 29.55 -2.65 -4.45 17.35 -34.1 124.65 -30.7 127.7 -30.7 127.75
+Q -25.171484375 132.366015625 -16.95 137.9 -8.6869140625 143.4890625 4.3 149.95 10.6763671875 153.11328125 15.4 155.2
+L 20.9 154.75 49.7 134.35 91.9 24.9 Z"/>
+</a>
+</g>
+</defs>
+
+<g transform="matrix( 2, 0, 0, 2, 80.5,17.9) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g filter="url(#Filter_1)" transform="matrix( 0.5, 0, 0, 0.5, -40.25,-8.95) ">
+<g transform="matrix( 2, 0, 0, 2, 8,8.4) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#stroke_labdreezer_0_Layer0_0_FILL"/>
+</g>
+</g>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#glow_labfrieezer1_14_Layer0_0_FILL"/>
+</g>
+</g>
+</g>
+</svg>
