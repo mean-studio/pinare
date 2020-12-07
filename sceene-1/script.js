@@ -44,6 +44,8 @@ function positionItems(top, left) {
 function play() {
   const myVideo = document.querySelector("#video1");
   const sceene = document.querySelector(`#${activeSceene}`);
+  const audio = document.querySelector("#au");
+  audio.play();
   sceene.style.display = "none";
   activeSceene = "scene-2a";
   myVideo.onended = (e) => {
