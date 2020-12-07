@@ -134,8 +134,8 @@
 <sceene id='scene-3' style="display: none;" >
     <div   class='intermediateScreen'>
     <div class='sceneDescription'> Preparing Equipment and Work Bench</div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr;width: 50%; margin: auto;">
-        <div class='button' onclick="displayScene3( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;width: 60%; margin: auto;">
+        <div class='button' onclick="displayScene2b()"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
     <div class='button' onclick="displayScene4()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
     </div></div>
 </sceene>
@@ -155,33 +155,31 @@
         </div>
 
 </sceene>
-
-<sceene id='scene-5' style="display: none;" > 
-    <div id='scene-5a' class='intermediateScreen'>
-        <div class='sceneDescription'> Cleaning Hands</div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr;">
-            <div class='button' onclick="displayScene4b( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
-            <div class='button' onclick="displayScene6()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
-        </div>  
-        </div>
+<sceene id='scene-5' style="display: none;" >
+    <div   class='intermediateScreen'>
+    <div class='sceneDescription'> Cleaning Hands</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;width: 60%; margin: auto;">
+        <div class='button' onclick="displayScene4b( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+    <div class='button' onclick="displayScene6()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+    </div></div>
 </sceene>
 
 <sceene id='scene-6' style="display: none;" > 
     <div class='player'>
-        <video width="100%"  id="videoPlayer" >
+        <video height="85%" style="margin: auto;" id="videoPlayer" >
             <source  src='video/scene-6.mp4' type="video/mp4">
         </video>
-        <div id='scene-bb' class='intermediateScreen' style="display: none; ">
-        <div class='sceneDescription'>Preparing Equipment and Work Bench</div>
-        <div class='rounded' onclick="rewindScene4( )"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg> </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr;">
-            <div class='button' onclick="displayScene3( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
-            <div class='button' onclick="displayScene5()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+        <div id='scene-6b' class='intermediateScreen' style="display: none; ">
+        <div class='sceneDescription'>Cleaning Hands</div>
+        <div class='rounded' onclick="rewindScene6()"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg> </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;  width: 50%; margin: auto;">
+            <div class='button' onclick="displayScene5()"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+            <div class='button' onclick="displayScene7()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
         </div>  
      </div>
     </div>
-
 </sceene>
+<sceene id='scene-7' style="display: none;" > </sceene>
 </body>
 <script src="script.js">   </script>
 </html>

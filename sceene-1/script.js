@@ -68,9 +68,8 @@ function displayScene2b() {
     getStarted.style.display = "block";
     getStarted.style.position = "absolute";
     getStarted.style.margin = "unset";
-    getStarted.style.left = "50%";
+    getStarted.style.right = "100px";
     getStarted.style.top = "10%";
-    getStarted.style.transform = "translate(-50%, 150%)";
   }, 5000);
 }
 function displayScene3() {
@@ -119,7 +118,45 @@ function displayScene5() {
   videoPlayer.play();
   videoPlayer.onended = () => {
     displayScene("scene-5");
+    document.querySelector(`#scene-5`).style.display = "grid";
   };
+}
+
+function displayScene6() {
+  displayScene("scene-6");
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "block";
+  console.log(activeSceene);
+  const player = document.querySelector(`#${activeSceene} .player`);
+  console.log(player);
+  player.classList = "player visible";
+  let videoPlayer = sceene.querySelector(`#videoPlayer`);
+  setTimeout(() => {
+    audioLoop.pause();
+    videoPlayer.play();
+  }, 500);
+  videoPlayer.onended = () => displayScene6b();
+}
+
+function displayScene6b() {
+  const sceene = document.querySelector(`#scene-6b`);
+  const parentScene = document.querySelector(`#scene-6`);
+  const nextScene = document.querySelector(`#scene-7`);
+  parentScene.style.display = "block";
+  nextScene.style.display = "none";
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  sceene.style.display = "grid";
+  videoPlayer.style.display = "none";
+}
+
+function rewindScene6() {
+  const parentScene = document.querySelector(`#scene-6`);
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  const sceene = document.querySelector(`#scene-6b`);
+  sceene.style.display = "none";
+  videoPlayer.style.display = "block";
+  videoPlayer.currentTime = 0;
+  videoPlayer.play();
 }
 function openFullscreen() {
   var elem = document.documentElement;

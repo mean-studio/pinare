@@ -132,6 +132,7 @@ button {
   white-space: nowrap;
   color: #de7001;
   max-width: 300px;
+  min-width: 200px;
   text-align: center;
   margin: 10%;
 }
