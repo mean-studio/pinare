@@ -44,8 +44,6 @@ function positionItems(top, left) {
 function play() {
   const myVideo = document.querySelector("#video1");
   const sceene = document.querySelector(`#${activeSceene}`);
-  const audio = document.querySelector("#au");
-  audio.play();
   sceene.style.display = "none";
   activeSceene = "scene-2a";
   myVideo.onended = (e) => {
@@ -133,7 +131,6 @@ function openFullscreen() {
 function pageLoaded() {
   positionItems();
   const paths = Array.from(document.querySelectorAll("path, polyline"));
-  document.querySelector("#au").play();
   let i = 0;
   const glow = setInterval(() => {
     if (i === paths.length) {
