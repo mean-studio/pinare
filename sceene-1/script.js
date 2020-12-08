@@ -2,14 +2,12 @@ let selectedItem = "";
 const audioLoop = document.querySelector("#au");
 function setHoverImages(parent) {
   const g = Array.from(document.querySelectorAll(`#${parent}  g`));
-  console.log(g);
   const descriptionImage = document.querySelector(
     `#${parent} #description-image`
   );
   g.forEach((item) => {
     item.onmouseover = () => {
       descriptionImage.style.backgroundImage = `url(img/${parent}/${item.id}.png)`;
-      console.log(`img/${parent}/${item.id}.png`, descriptionImage.style);
     };
     item.onmouseout = () => {
       descriptionImage.style.backgroundImage = "unset";
@@ -26,11 +24,9 @@ function mouseOut({ target }) {
 }
 function positionItems(top, left) {
   const ratio = window.innerWidth / 1920;
-  console.log(ratio, window.innerWidth);
   let descriptionBox = document.querySelector(
     `#${activeSceene} #description-image`
   );
-  console.log(descriptionBox);
   setHoverImages(activeSceene);
   descriptionBox.style.left = `${window.innerWidth * (top || 0.5)}px`;
   descriptionBox.style.top = `${window.innerHeight * (left || 0.58)}px`;
@@ -62,7 +58,6 @@ function displayScene2b() {
   displayScene("scene-2b");
   positionItems(0.2, 0.1);
   setTimeout(() => {
-    console.log("hiding scene", activeSceene);
     // displayScene("scene-2c");
     const getStarted = document.querySelector(`#getStarted`);
     getStarted.style.display = "block";
@@ -108,6 +103,16 @@ function rewindScene4() {
   videoPlayer.currentTime = 0;
   videoPlayer.play();
 }
+function backToScene4() {
+  const sceene = document.querySelector(`#scene-5`);
+  sceene.style.display = "none";
+  let videoPlayer = document.querySelector("#video1");
+  let source = videoPlayer.querySelector("source");
+  source.src = "video/s4_5_transition_r.mp4";
+  videoPlayer.load();
+  videoPlayer.play();
+  videoPlayer.onended = () => displayScene4b();
+}
 function displayScene5() {
   const sceene = document.querySelector(`#scene-4`);
   let videoPlayer = document.querySelector("#video1");
@@ -126,9 +131,7 @@ function displayScene6() {
   displayScene("scene-6");
   const sceene = document.querySelector(`#${activeSceene}`);
   sceene.style.display = "block";
-  console.log(activeSceene);
   const player = document.querySelector(`#${activeSceene} .player`);
-  console.log(player);
   player.classList = "player visible";
   let videoPlayer = sceene.querySelector(`#videoPlayer`);
   setTimeout(() => {
@@ -171,7 +174,6 @@ function displayScene8() {
   displayScene("scene-8");
   const sceene = document.querySelector(`#${activeSceene}`);
   sceene.style.display = "block";
-  console.log(activeSceene);
   const player = document.querySelector(`#${activeSceene} .player`);
   player.classList = "player visible";
   let videoPlayer = sceene.querySelector(`#videoPlayer`);
@@ -212,7 +214,6 @@ function displayScene10() {
   displayScene("scene-10");
   const sceene = document.querySelector(`#${activeSceene}`);
   sceene.style.display = "block";
-  console.log(activeSceene);
   const player = document.querySelector(`#${activeSceene} .player`);
   player.classList = "player visible";
   let videoPlayer = sceene.querySelector(`#videoPlayer`);
