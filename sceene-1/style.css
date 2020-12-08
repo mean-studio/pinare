@@ -212,3 +212,6 @@ button {
   color: #de7001;
   text-align: center;
 }
+.complete {
+  color: #22403e !important;
+}
