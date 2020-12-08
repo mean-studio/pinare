@@ -228,7 +228,7 @@ function displayScene10b() {
   const parentScene = document.querySelector(`#scene-10`);
   const nextScene = document.querySelector(`#scene-11`);
   parentScene.style.display = "block";
-  // nextScene.style.display = "none";
+  nextScene.style.display = "none";
   let videoPlayer = parentScene.querySelector(`#videoPlayer`);
   sceene.style.display = "grid";
   videoPlayer.style.display = "none";
@@ -238,6 +238,155 @@ function rewindScene10() {
   const parentScene = document.querySelector(`#scene-10`);
   let videoPlayer = parentScene.querySelector(`#videoPlayer`);
   const sceene = document.querySelector(`#scene-10b`);
+  sceene.style.display = "none";
+  videoPlayer.style.display = "block";
+  videoPlayer.currentTime = 0;
+  videoPlayer.play();
+}
+
+function displayScene11() {
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "none";
+  displayScene("scene-11");
+  document.querySelector(`#${activeSceene}`).style.display = "grid";
+}
+function displayScene12() {
+  displayScene("scene-12");
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "block";
+  const player = document.querySelector(`#${activeSceene} .player`);
+  player.classList = "player visible";
+  let videoPlayer = sceene.querySelector(`#videoPlayer`);
+  setTimeout(() => {
+    audioLoop.pause();
+    videoPlayer.play();
+  }, 500);
+  videoPlayer.onended = () => displayScene12b();
+}
+function displayScene12b() {
+  const sceene = document.querySelector(`#scene-12b`);
+  const parentScene = document.querySelector(`#scene-12`);
+  const nextScene = document.querySelector(`#scene-13`);
+  parentScene.style.display = "block";
+  nextScene.style.display = "none";
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  sceene.style.display = "grid";
+  videoPlayer.style.display = "none";
+}
+
+function displayScene13() {
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "none";
+  displayScene("scene-13");
+  document.querySelector(`#${activeSceene}`).style.display = "grid";
+}
+function displayScene14() {
+  displayScene("scene-14");
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "block";
+  const player = document.querySelector(`#${activeSceene} .player`);
+  player.classList = "player visible";
+  let videoPlayer = sceene.querySelector(`#videoPlayer`);
+  setTimeout(() => {
+    audioLoop.pause();
+    videoPlayer.play();
+  }, 500);
+  videoPlayer.onended = () => displayScene14b();
+}
+function displayScene14b() {
+  const sceene = document.querySelector(`#scene-14b`);
+  const parentScene = document.querySelector(`#scene-14`);
+  const nextScene = document.querySelector(`#scene-15`);
+  parentScene.style.display = "block";
+  nextScene.style.display = "none";
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  sceene.style.display = "grid";
+  videoPlayer.style.display = "none";
+}
+
+function rewindScene14() {
+  const parentScene = document.querySelector(`#scene-14`);
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  const sceene = document.querySelector(`#scene-14b`);
+  sceene.style.display = "none";
+  videoPlayer.style.display = "block";
+  videoPlayer.currentTime = 0;
+  videoPlayer.play();
+}
+
+function displayScene15() {
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "none";
+  displayScene("scene-15");
+  document.querySelector(`#${activeSceene}`).style.display = "grid";
+}
+function displayScene16() {
+  displayScene("scene-16");
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "block";
+  const player = document.querySelector(`#${activeSceene} .player`);
+  player.classList = "player visible";
+  let videoPlayer = sceene.querySelector(`#videoPlayer`);
+  setTimeout(() => {
+    audioLoop.pause();
+    videoPlayer.play();
+  }, 500);
+  videoPlayer.onended = () => displayScene16b();
+}
+function displayScene16b() {
+  const sceene = document.querySelector(`#scene-16b`);
+  const parentScene = document.querySelector(`#scene-16`);
+  const nextScene = document.querySelector(`#scene-17`);
+  parentScene.style.display = "block";
+  nextScene.style.display = "none";
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  sceene.style.display = "grid";
+  videoPlayer.style.display = "none";
+}
+
+function rewindScene16() {
+  const parentScene = document.querySelector(`#scene-16`);
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  const sceene = document.querySelector(`#scene-16b`);
+  sceene.style.display = "none";
+  videoPlayer.style.display = "block";
+  videoPlayer.currentTime = 0;
+  videoPlayer.play();
+}
+function displayScene17() {
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "none";
+  displayScene("scene-17");
+  document.querySelector(`#${activeSceene}`).style.display = "grid";
+}
+function displayScene18() {
+  displayScene("scene-18");
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "block";
+  const player = document.querySelector(`#${activeSceene} .player`);
+  player.classList = "player visible";
+  let videoPlayer = sceene.querySelector(`#videoPlayer`);
+  setTimeout(() => {
+    audioLoop.pause();
+    videoPlayer.play();
+  }, 500);
+  videoPlayer.onended = () => displayScene18b();
+}
+function displayScene18b() {
+  const sceene = document.querySelector(`#scene-18b`);
+  const parentScene = document.querySelector(`#scene-18`);
+  const nextScene = document.querySelector(`#scene-19`);
+  parentScene.style.display = "block";
+  // nextScene.style.display = "none";
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  sceene.style.display = "grid";
+  videoPlayer.style.display = "none";
+}
+
+function rewindScene18() {
+  const parentScene = document.querySelector(`#scene-18`);
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  const sceene = document.querySelector(`#scene-18b`);
   sceene.style.display = "none";
   videoPlayer.style.display = "block";
   videoPlayer.currentTime = 0;

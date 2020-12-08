@@ -201,16 +201,15 @@
         </div>  
      </div>
     </div></sceene>
-    <sceene id='scene-9' style="display: none;" >
+    <sceene id='scene-9' style="display: none;background-image: url(img/plate_labeling.jpg);" >
         <div   class='intermediateScreen'>
-            <!-- <img src="img/plate_labeling.jpg" style="width: 100%; height: auto;"/> -->
         <div class='sceneDescription' style="z-index: 100;"> Plate Labeling </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr;width: 60%; margin: auto;">
-            <div class='button' onclick="displayScene9b( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+            <div class='button' onclick="displayScene8b( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
         <div class='button' onclick="displayScene10()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
         </div></div>
     </sceene>
-    <sceene id='scene-10' style="display: none;" >
+    <sceene id='scene-10' style="display: none;background-image: url(img/plate_labeling.jpg);" >
         <div class='player'>
             <video height="85%" style="margin: auto;" id="videoPlayer" >
                 <source  src='video/scene-10.mp4' type="video/mp4">
@@ -223,7 +222,100 @@
                 <div class='button' onclick="displayScene11()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
             </div>  
          </div>
-        </div></sceene>
+        </div>
+    </sceene>
+    <sceene id='scene-11' style="display: none;background-image: url(img/plate_labeling.jpg);" >
+        <div   class='intermediateScreen'>
+        <div class='sceneDescription' style="z-index: 100;"> Broth to Plate Transfer </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;width: 60%; margin: auto;">
+            <div class='button' onclick="displayScene10b( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+        <div class='button' onclick="displayScene12()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+        </div></div>
+    </sceene>
+    <sceene id='scene-12' style="display: none;background-image: url(img/plate_labeling.jpg);" >
+        <div class='player'>
+            <video height="85%" style="margin: auto;" id="videoPlayer" >
+                <source  src='video/scene-11.mp4' type="video/mp4">
+            </video>
+            <div id='scene-12b' class='intermediateScreen' style="display: none; ">
+            <div class='sceneDescription'>Broth to Plate Transfer</div>
+            <div class='rounded' onclick="rewindScene12()"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg> </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr;  width: 50%; margin: auto;">
+                <div class='button' onclick="displayScene11()"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+                <div class='button' onclick="displayScene13()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+            </div>  
+         </div>
+        </div>
+    </sceene>
+    <sceene id='scene-13' style="display: none " >
+        <div   class='intermediateScreen'>
+        <div class='sceneDescription' style="z-index: 100;"> Plate to Plate Transfer </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;width: 60%; margin: auto;">
+            <div class='button' onclick="displayScene12b( )"><svg style="transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+        <div class='button' onclick="displayScene14()">Next <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+        </div></div>
+    </sceene>
+    <sceene id='scene-14' style="display: none " >
+        <div class='player'>
+            <video height="85%" style="margin: auto;" id="videoPlayer" >
+                <source  src='video/scene-13.mp4' type="video/mp4">
+            </video>
+            <div id='scene-14b' class='intermediateScreen' style="display: none; ">
+            <div class='sceneDescription'>Plate to Plate Transfer</div>
+            <div class='rounded' onclick="rewindScene14()"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg> </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr;  width: 50%; margin: auto;">
+                <div class='button' onclick="displayScene13()"><svg style="transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+                <div class='button' onclick="displayScene15()">Next <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+            </div>  
+         </div>
+        </div>
+    </sceene>
+<sceene id='scene-15' style="display: none " >
+    <div   class='intermediateScreen'>
+    <div class='sceneDescription' style="z-index: 100;"> Broth to Broth Transfer </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;width: 60%; margin: auto;">
+        <div class='button' onclick="displayScene14b( )"><svg style="transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+    <div class='button' onclick="displayScene16()">Next <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+    </div></div>
+</sceene>
+<sceene id='scene-16' style="display: none " >
+    <div class='player'>
+        <video height="85%" style="margin: auto;" id="videoPlayer" >
+            <source  src='video/scene-15.mp4' type="video/mp4">
+        </video>
+        <div id='scene-16b' class='intermediateScreen' style="display: none; ">
+        <div class='sceneDescription'>Broth to Broth Transfer</div>
+        <div class='rounded' onclick="rewindScene16()"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg> </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;  width: 50%; margin: auto;">
+            <div class='button' onclick="displayScene15()"><svg style="transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+            <div class='button' onclick="displayScene17()">Next <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+        </div>  
+     </div>
+    </div>
+</sceene>
+<sceene id='scene-17' style="display: none " >
+    <div   class='intermediateScreen'>
+    <div class='sceneDescription' style="z-index: 100;">Cleaning Up</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr;width: 60%; margin: auto;">
+        <div class='button' onclick="displayScene16b( )"><svg style="transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+    <div class='button' onclick="displayScene18()">Next <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+    </div></div>
+</sceene>
+<sceene id='scene-18' style="display: none " >
+    <div class='player'>
+        <video height="85%" style="margin: auto;" id="videoPlayer" >
+            <source  src='video/scene-17.mp4' type="video/mp4">
+        </video>
+        <div id='scene-18b' class='intermediateScreen' style="display: none; ">
+        <div class='sceneDescription'>Cleaning Up</div>
+        <div class='rounded' onclick="rewindScene17()"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg> </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr;  width: 50%; margin: auto;">
+            <div class='button' onclick="displayScene17()"><svg style="transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+            <div class='button' onclick="displayScene19()">Complete <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+        </div>  
+     </div>
+    </div>
+</sceene>
 </body>
 <script src="script.js">   </script>
 </html>
