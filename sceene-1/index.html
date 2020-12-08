@@ -6,41 +6,42 @@
     <title>Scene-1</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="pageLoaded()" onresize="positionItems()">
-    <audio autoplay loop  id="au">
+<body onload=" " onresize="positionItems()">
+    <audio loop  id="au">
         <source src="loop.m4a" type="audio/mpeg">
       </audio>
     <video width="100%"  id="video1" ><source  src='S1_2_v4.mp4' type="video/mp4"></video>
-        <sceene id='scene-1' >
-            <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 1920 1080" style="position: absolute; top: 0;width: 100vw;" xml:space="preserve">
-                <g id="incineratorcarton">
-                    <polyline class="initial" points="629.8,878.9 577.1,811.8 480.1,865.8 517.8,977.9 565,1045.7 652.2,991.8 629.8,878.9 	"/>
-                </g>
-                <g id="biohazardwaste">
-                    <path class="initial" d="M470.8,863.8c-0.1-0.5-0.1-0.9,0.1-1.4c0.1-0.5,0.4-0.8,0.9-1l74-41.1l-41-53.8l-72.5,38.3l47.6,114.6
-                        l19.4,28.9L470.8,863.8"/>
-                </g>
-                <g id="sink">
-                    <polyline class="initial" points="856,512.4 899.2,547.6 1040,476.3 996.2,446.3 856,512.4 	"/>
-                </g>
-                <g id="workbench">
-                    <polyline class="initial" points="762.9,351.2 703.5,371.9 860.8,498.1 920.9,469.2 762.9,351.2 	"/>
-                </g>
-                <g id="incubator">
-                    <polyline class="initial" points="724.9,342.3 719.7,297.8 689.6,296.5 682.8,307.5 688.4,354.7 717.9,357.8 724.9,342.3 	"/>
-                </g>
-                <g id="fridge">
-                    <polyline class="initial" points="1385.7,198.2 1314.2,228.7 1276.7,444.7 1446.7,548.2 1507.7,331.2 1570.6,297.2 1577.7,284.2 
-                        1385.7,198.2 	"/>
-                </g>
-                <g id="freezer">
-                    <path hover-img='1' class="initial" d="M1707.8,350.3l-3.2-2.7l-124-54l-69.6,41l-59.9,216.5l7.8,7c7.4,6.2,16.6,13,27.7,20.5
-                        c11.1,7.5,25.3,15.5,42.7,24.2c8.7,4.3,16.3,7.9,22.8,10.8l12-1l58.5-41.5L1707.8,350.3z"/>
-                </g>
-            </svg>
+    <sceene id='scene-0' style="display: grid; z-index: 1000;" ><div class='rounded' onclick="pageLoaded()"> <svg  style="transform: scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#398905" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div></sceene>
+    <sceene id='scene-1' >
+        <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1920 1080" style="position: absolute; top: 0;width: 100vw;" xml:space="preserve">
+            <g id="incineratorcarton">
+                <polyline class="initial" points="629.8,878.9 577.1,811.8 480.1,865.8 517.8,977.9 565,1045.7 652.2,991.8 629.8,878.9 	"/>
+            </g>
+            <g id="biohazardwaste">
+                <path class="initial" d="M470.8,863.8c-0.1-0.5-0.1-0.9,0.1-1.4c0.1-0.5,0.4-0.8,0.9-1l74-41.1l-41-53.8l-72.5,38.3l47.6,114.6
+                    l19.4,28.9L470.8,863.8"/>
+            </g>
+            <g id="sink">
+                <polyline class="initial" points="856,512.4 899.2,547.6 1040,476.3 996.2,446.3 856,512.4 	"/>
+            </g>
+            <g id="workbench">
+                <polyline class="initial" points="762.9,351.2 703.5,371.9 860.8,498.1 920.9,469.2 762.9,351.2 	"/>
+            </g>
+            <g id="incubator">
+                <polyline class="initial" points="724.9,342.3 719.7,297.8 689.6,296.5 682.8,307.5 688.4,354.7 717.9,357.8 724.9,342.3 	"/>
+            </g>
+            <g id="fridge">
+                <polyline class="initial" points="1385.7,198.2 1314.2,228.7 1276.7,444.7 1446.7,548.2 1507.7,331.2 1570.6,297.2 1577.7,284.2 
+                    1385.7,198.2 	"/>
+            </g>
+            <g id="freezer">
+                <path hover-img='1' class="initial" d="M1707.8,350.3l-3.2-2.7l-124-54l-69.6,41l-59.9,216.5l7.8,7c7.4,6.2,16.6,13,27.7,20.5
+                    c11.1,7.5,25.3,15.5,42.7,24.2c8.7,4.3,16.3,7.9,22.8,10.8l12-1l58.5-41.5L1707.8,350.3z"/>
+            </g>
+        </svg>
         <div id='description-image'></div>
-        <div style="display:block" class="glowing-circle" onclick="play()"></div>
+        <div style="display:none" class="glowing-circle" onclick="play()"></div>
     </sceene>
     <sceene id='scene-2a' style="display: none;" >
         <div class='button centered-button ' onclick="displayScene2b( )">Have a look around</div>
@@ -148,7 +149,7 @@
             <div class='sceneDescription'>Preparing Equipment and Work Bench</div>
             <div class='rounded' onclick="rewindScene4( )"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg> </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr;  width: 50%; margin: auto;">
-                <div class='button' onclick="displayScene3( )"><svg style="    transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
+                <div class='button' onclick="displayScene3( )"><svg style="transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
                 <div class='button' onclick="displayScene5()">Next <svg style="    transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
             </div>  
          </div>
@@ -316,6 +317,7 @@
      </div>
     </div>
 </sceene>
+<sceene id='scene-19' style="display: none " ><embed src="img/scene18.svg" width="100%"></embed></sceene>
 </body>
 <script src="script.js">   </script>
 </html>

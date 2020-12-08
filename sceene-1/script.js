@@ -382,7 +382,9 @@ function displayScene18b() {
   sceene.style.display = "grid";
   videoPlayer.style.display = "none";
 }
-
+function displayScene19() {
+  displayScene("scene-19");
+}
 function rewindScene18() {
   const parentScene = document.querySelector(`#scene-18`);
   let videoPlayer = parentScene.querySelector(`#videoPlayer`);
@@ -405,8 +407,15 @@ function openFullscreen() {
   }
 }
 function pageLoaded() {
+  let currentScene = document.querySelector(`#scene-0`);
+  document.querySelector(".glowing-circle").style.display = "block";
+  let au = document.querySelector(`#au`);
+  au.play();
+  currentScene.style.display = "none";
   positionItems();
-  const paths = Array.from(document.querySelectorAll("path, polyline"));
+  const paths = Array.from(
+    document.querySelectorAll("#scene-1 path, polyline")
+  );
   let i = 0;
   const glow = setInterval(() => {
     if (i === paths.length) {
