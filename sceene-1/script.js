@@ -158,6 +158,90 @@ function rewindScene6() {
   videoPlayer.currentTime = 0;
   videoPlayer.play();
 }
+
+function displayScene7() {
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "none";
+
+  displayScene("scene-7");
+  document.querySelector(`#${activeSceene}`).style.display = "grid";
+}
+
+function displayScene8() {
+  displayScene("scene-8");
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "block";
+  console.log(activeSceene);
+  const player = document.querySelector(`#${activeSceene} .player`);
+  player.classList = "player visible";
+  let videoPlayer = sceene.querySelector(`#videoPlayer`);
+  setTimeout(() => {
+    audioLoop.pause();
+    videoPlayer.play();
+  }, 500);
+  videoPlayer.onended = () => displayScene8b();
+}
+function displayScene8b() {
+  const sceene = document.querySelector(`#scene-8b`);
+  const parentScene = document.querySelector(`#scene-8`);
+  const nextScene = document.querySelector(`#scene-9`);
+  parentScene.style.display = "block";
+  nextScene.style.display = "none";
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  sceene.style.display = "grid";
+  videoPlayer.style.display = "none";
+}
+
+function rewindScene8() {
+  const parentScene = document.querySelector(`#scene-8`);
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  const sceene = document.querySelector(`#scene-8b`);
+  sceene.style.display = "none";
+  videoPlayer.style.display = "block";
+  videoPlayer.currentTime = 0;
+  videoPlayer.play();
+}
+function displayScene9() {
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "none";
+
+  displayScene("scene-9");
+  document.querySelector(`#${activeSceene}`).style.display = "grid";
+}
+function displayScene10() {
+  displayScene("scene-10");
+  const sceene = document.querySelector(`#${activeSceene}`);
+  sceene.style.display = "block";
+  console.log(activeSceene);
+  const player = document.querySelector(`#${activeSceene} .player`);
+  player.classList = "player visible";
+  let videoPlayer = sceene.querySelector(`#videoPlayer`);
+  setTimeout(() => {
+    audioLoop.pause();
+    videoPlayer.play();
+  }, 500);
+  videoPlayer.onended = () => displayScene10b();
+}
+function displayScene10b() {
+  const sceene = document.querySelector(`#scene-10b`);
+  const parentScene = document.querySelector(`#scene-10`);
+  const nextScene = document.querySelector(`#scene-11`);
+  parentScene.style.display = "block";
+  // nextScene.style.display = "none";
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  sceene.style.display = "grid";
+  videoPlayer.style.display = "none";
+}
+
+function rewindScene10() {
+  const parentScene = document.querySelector(`#scene-10`);
+  let videoPlayer = parentScene.querySelector(`#videoPlayer`);
+  const sceene = document.querySelector(`#scene-10b`);
+  sceene.style.display = "none";
+  videoPlayer.style.display = "block";
+  videoPlayer.currentTime = 0;
+  videoPlayer.play();
+}
 function openFullscreen() {
   var elem = document.documentElement;
   if (elem.requestFullscreen) {
