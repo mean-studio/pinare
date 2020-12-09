@@ -63,7 +63,7 @@ function displayScene2b() {
     getStarted.style.display = "block";
     getStarted.style.position = "absolute";
     getStarted.style.margin = "unset";
-    getStarted.style.right = "100px";
+    getStarted.style.right = "150px";
     getStarted.style.top = "10%";
   }, 5000);
 }
@@ -80,7 +80,6 @@ function displayScene4() {
   player.classList = "player visible";
   let videoPlayer = document.querySelector("#videoPlayer");
   setTimeout(() => {
-    audioLoop.pause();
     videoPlayer.play();
   }, 500);
   videoPlayer.onended = () => displayScene4b();
@@ -135,7 +134,6 @@ function displayScene6() {
   player.classList = "player visible";
   let videoPlayer = sceene.querySelector(`#videoPlayer`);
   setTimeout(() => {
-    audioLoop.pause();
     videoPlayer.play();
   }, 500);
   videoPlayer.onended = () => displayScene6b();
@@ -178,7 +176,6 @@ function displayScene8() {
   player.classList = "player visible";
   let videoPlayer = sceene.querySelector(`#videoPlayer`);
   setTimeout(() => {
-    audioLoop.pause();
     videoPlayer.play();
   }, 500);
   videoPlayer.onended = () => displayScene8b();
@@ -218,7 +215,6 @@ function displayScene10() {
   player.classList = "player visible";
   let videoPlayer = sceene.querySelector(`#videoPlayer`);
   setTimeout(() => {
-    audioLoop.pause();
     videoPlayer.play();
   }, 500);
   videoPlayer.onended = () => displayScene10b();
@@ -288,7 +284,6 @@ function displayScene14() {
   player.classList = "player visible";
   let videoPlayer = sceene.querySelector(`#videoPlayer`);
   setTimeout(() => {
-    audioLoop.pause();
     videoPlayer.play();
   }, 500);
   videoPlayer.onended = () => displayScene14b();
@@ -406,10 +401,25 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
+function toggleMusic() {
+  let au = document.querySelector(`#au`);
+  const playIcon = document.querySelector(`#play-sound`);
+  const pauseIcon = document.querySelector(`#mute-sound`);
+  if (au.paused) {
+    au.play();
+    playIcon.style.display = "none";
+    pauseIcon.style.display = "block";
+  } else {
+    au.pause();
+    playIcon.style.display = "block";
+    pauseIcon.style.display = "none";
+  }
+}
 function pageLoaded() {
   let currentScene = document.querySelector(`#scene-0`);
   document.querySelector(".glowing-circle").style.display = "block";
   let au = document.querySelector(`#au`);
+  document.querySelector(`#toggle-music`).style.display = "grid";
   au.play();
   currentScene.style.display = "none";
   positionItems();
