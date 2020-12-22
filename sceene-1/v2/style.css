@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+body {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  font-family: "Open Sans", "Calibri", sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(190, 192, 193, 1) 0%,
+    rgba(244, 244, 244, 1) 100%
+  );
+}
+g,
+.glowing-circle,
+.centered-button,
+.button,
+.rounded {
+  cursor: url(cursor32.png), pointer;
+}
+
+.glowing-circle {
+  position: absolute;
+  top: 22vh;
+  left: 40vw;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 108, 108, 1) 75%
+  );
+  border-radius: 50%;
+  animation-duration: 1.5s;
+  animation-name: dot-anim;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition: all 0.5s;
+}
+.glowing-circle:hover {
+  animation-name: unset;
+  padding: 10px;
+  transform: translate(-13px, -13px);
+  transition: all 0.5s;
+}
+
+@keyframes dot-anim {
+  0% {
+    -webkit-box-shadow: 0px 0px 1px -0px #ff0000;
+    box-shadow: 0px 0px 1px 0px #ff0000;
+  }
+
+  100% {
+    -webkit-box-shadow: 0px 0px 1px 25px rgba(255, 0, 0, 0);
+    box-shadow: 0px 0px 1px 25px rgba(255, 0, 0, 0);
+  }
+}
+
+.player {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  background-image: url(img/ipad.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 100vh;
+  left: -100vw;
+  transform: rotate(-90deg) scale(0.1);
+  transition: all 1s;
+}
+.visible {
+  position: absolute;
+  transition: all 1.5s;
+  top: 0;
+  left: 0;
+  margin-top: 5vh;
+  display: grid;
+  transform: rotate(0deg);
+  animation-timing-function: ease-in;
+}
+#bgVideo {
+  width: 100%;
+}
+scene,
+.scene {
+  display: grid;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  transition: all 1.5s;
+}
+scene > .title {
+  font-size: 46px;
+  font-weight: 700;
+  position: relative;
+  border: 4px solid #bcbcbc;
+  border-radius: 20px;
+  background: rgb(219, 219, 219);
+  background: linear-gradient(
+    0deg,
+    rgba(219, 219, 219, 1) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+  padding: 35px;
+  color: #22403e;
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 5%;
+}
+.button:hover,
+.rounded:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(219, 219, 219, 1) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+}
+
+.rounded {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 0;
+  font-weight: 700;
+  position: relative;
+  border: 7px solid #bcbcbc;
+  background: rgb(219, 219, 219);
+  background: linear-gradient(
+    0deg,
+    rgba(219, 219, 219, 1) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+  padding: 25px;
+  color: #de7001;
+  text-align: center;
+}
+button {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  border: 7px solid #bcbcbc;
+  border-radius: 50px;
+  background: rgb(219, 219, 219);
+  background: linear-gradient(
+    0deg,
+    rgba(219, 219, 219, 1) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+  padding: 15px 35px;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  color: #de7001;
+  max-width: 300px;
+  min-width: 200px;
+  text-align: center;
+  margin: 10%;
+  transition: all 0.5s;
+}
+.button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+  align-items: center;
+  justify-items: center;
+}
+
+#overlay-1,
+#overlay-2 {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.initial {
+  fill: #ffff00;
+  fill-opacity: 0;
+  stroke: #ffff00;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-opacity: 0.5;
+  transition: all 0.5s;
+}
+.initial:hover,
+.hovered {
+  fill: #ffff00;
+  fill-opacity: 0.5;
+  transition: all 0.5s;
+}
+
+#toggle-music {
+  padding: 5px;
+  position: absolute;
+  z-index: 100;
+  top: 50px;
+  right: 50px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#description-image {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s;
+}
+
+.centered-button {
+  margin-left: 40vw;
+  align-self: center;
+  justify-self: center;
+  width: 20%;
+  max-width: 200px;
+  text-align: center;
+}
+.button {
+  font-size: 36px;
+  font-weight: 600;
+  position: relative;
+  border: 7px solid #ccc;
+  border-radius: 50px;
+  background: rgb(219, 219, 219);
+  background: linear-gradient(
+    0deg,
+    rgba(219, 219, 219, 1) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+  padding: 15px 35px;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  color: #de7001;
+  max-width: 300px;
+  min-width: 200px;
+  text-align: center;
+  margin: 10%;
+}
+.button:hover,
+.rounded:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(219, 219, 219, 1) 0%,
+    rgba(255, 255, 255, 1) 75%
+  );
+}
+#outro {
+  display: grid;
+  width: 70%;
+  height: 80%;
+  align-items: center;
+  justify-items: center;
+  transition: all 1.5s;
+  justify-self: center;
+  align-self: center;
+  position: unset;
+}
+#bgImage {
+  display: grid;
+  background-image: url(img/plate_labeling.jpg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transition: all 1s ease-in;
+}
+.oVisible {
+  opacity: 1 !important;
+  transition: all 1s ease-in;
+}
+.oHidden {
+  opacity: 0;
+  transition: all 1s ease-in;
+}

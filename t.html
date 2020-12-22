@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    base-component{
+        display: block;
+    }
+</style>
+<body>
+            <script>
+                function Component (tag,body){
+                const component=function (settings){
+ 
+                    let item= document.createElement(tag);
+                    Object.defineProperty(item,'render',{value:body.render,  enumerable: false})
+                   const render=item.render.bind(item)
+                    body.watch.forEach(property => {
+                        Object.defineProperty(item,property,{set(newValue){
+                            this[`_${property}`]=newValue;
+                            console.log(property,newValue)
+                             render()
+                        },
+                        get(){
+                            return  this[`_${property}`]
+                        },
+                        enumerable: true,
+                        configurable: true})
+                   
+                    });
+                    Object.defineProperty(item,'has',{value:function(func){ Object.assign(item,item,func)},  enumerable: false})
+                    return item
+                    }
+                Object.defineProperty(component,'has',{value:function(name,func){
+                  
+                    this[name]=func
+                    console.log(name,func,this)
+                },  enumerable: false})
+                     return component
+                }
+                const BaseComponent=Component('base-component',{watch:['name','surname'],
+                render:function() {
+                    this.innerHTML=this.name
+                }
+            }
+            )
+            BaseComponent.has(print,function (){console.log('print',Object.keys(this))})
+const OtherComponent=Component('other-component',{watch:['name','surname'],
+                render:function() {
+                    this.innerHTML=this.surname
+                }
+            })
+                let baseElement=BaseComponent()
+                baseElement.name='new name'
+                // baseElement.print()
+                let otherElement=OtherComponent( )
+                otherElement.surname='appe'
+                document.body.appendChild(baseElement)
+
+                document.body.appendChild(otherElement)
+            </script>
+</body>
+</html>
