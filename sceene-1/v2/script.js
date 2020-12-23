@@ -8,6 +8,7 @@ const scene = document.querySelector("#intro");
 const outro = document.querySelector("#outro");
 const outroPreviousButton = outro.querySelector("#previousButton");
 const outroNextButton = outro.querySelector("#nextButton");
+const completeButton = outro.querySelector("#completeButton");
 const outroTitle = outro.querySelector(".title");
 const titleScene = document.querySelector("#titleScene");
 const sceneTitle = titleScene.querySelector(".title");
@@ -18,6 +19,7 @@ const overlay1 = document.querySelector("#overlay-1");
 const overlay2 = document.querySelector("#overlay-2");
 const getStarted = overlay2.querySelector("#getStarted");
 const toggleMusicButton = document.querySelector("#toggle-music");
+const finalScene = document.querySelector("#finalScene");
 let au = document.querySelector(`#au`);
 function showFirstScene() {
   scene.classList.add("visible");
@@ -238,7 +240,10 @@ const scenes = {
   "scene-9": {
     title: "Broth to Broth Transfer",
     video: "scene-15",
-    next: () => displayTitle("scene-10"),
+    next: () => {
+      showCompleteButton();
+      displayTitle("scene-10");
+    },
     previous: () => displayTitle("scene-9"),
     introNext: () => displayScene("scene-9"),
     introPrevious: () => displayScene("scene-8"),
@@ -247,8 +252,23 @@ const scenes = {
     title: "Cleaning Up",
     video: "scene-17",
     next: () => {},
-    previous: () => displayTitle("scene-10"),
+    previous: () => {
+      hideCompleteButton();
+      displayTitle("scene-10");
+    },
     introNext: () => displayScene("scene-10"),
     introPrevious: () => displayScene("scene-9"),
   },
 };
+function hideCompleteButton() {
+  completeButton.style.display = "none";
+  outroNextButton.style.display = "block";
+}
+function showCompleteButton() {
+  outroNextButton.style.display = "none";
+  completeButton.style.display = "block";
+}
+function displayFinalScene() {
+  player.classList.remove("visible");
+  finalScene.style.display = "grid";
+}
