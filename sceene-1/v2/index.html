@@ -164,7 +164,7 @@
 <!-- <embed src="img/scene18.svg" id='finalScene' width="100%" style="display: none;"></embed > -->
     <div id='finalScene' style="display: none;"> <div class="menu" >
         <input type="checkbox" id="toggle" />
-        <label id="show-menu" for="toggle">
+        <label id="show-menu" for="toggle" onclick="console.log(event.target.getAttribute('data-t'))">
           <div class="btn">
             <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
             <i class="material-icons md-36 toggleBtn closeBtn">close</i>
@@ -175,26 +175,25 @@
           <div class="btn" data-t='Cleaning Hands'>
             <img src='img/7539417F3673D035.png'/>
           </div>
-          <div class="btn" data-t='Preparing Equipment and Work Bench'>
+          <div class="btn" data-t='Sterilizing Metal Inoculating Loop'>
             <img src='img/7539417F3673D03E.png'  />
           </div>
-          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+          <div class="btn" data-t='Plate Labeling' >
             <img src='img/7539417F3673D030.png' />
           </div>
-          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+          <div class="btn" data-t='Broth to Plate Transfer' >
+           <img src='img/7539417F3673D033.png' />
+          </div>
+          <div class="btn" data-t='Plate to Plate Transfer' >
             <img src='img/7539417F3673D031.png' />
           </div>
-          <div class="btn" data-t='Preparing Equipment and Work Bench' >
-            <img src='img/7539417F3673D032.png' />
-          </div>
-          <div class="btn" data-t='Preparing Equipment and Work Bench' >
-            <img src='img/7539417F3673D033.png' />
-          </div>
-
-          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+          <div class="btn" data-t='Broth to Broth Transfer' > 
             <img src='img/7539417F3673D036.png' />
           </div>
 
+          <div class="btn" data-t='Cleaning Up' >  
+              <img src='img/7539417F3673D032.png' />
+          </div>
         </label>
       </div>
     </div>

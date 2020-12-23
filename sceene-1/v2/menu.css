@@ -25,7 +25,6 @@ input {
   height: 100px;
   border-radius: 100px;
   position: absolute;
-  cursor: pointer;
 }
 
 .material-icons.md-36 {
@@ -111,11 +110,17 @@ input {
   -webkit-transition-delay: 0.6s;
   transition-delay: 0.8s;
 }
-
+input#toggle:checked ~ #show-menu .btn:nth-child(1)::after {
+  border: unset;
+  background: unset;
+}
 input#toggle:checked ~ #show-menu .btn:nth-child(2) {
   top: -180px;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(2)::after {
+  top: -100px;
 }
 
 input#toggle:checked ~ #show-menu .btn:nth-child(3) {
@@ -123,6 +128,11 @@ input#toggle:checked ~ #show-menu .btn:nth-child(3) {
   left: 120px;
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(3)::after,
+.btn:nth-child(4)::after,
+.btn:nth-child(5)::after {
+  left: 120px;
 }
 
 input#toggle:checked ~ #show-menu .btn:nth-child(4) {
@@ -143,6 +153,9 @@ input#toggle:checked ~ #show-menu .btn:nth-child(6) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
+input#toggle:checked ~ #show-menu .btn:nth-child(6)::after {
+  top: 120px;
+}
 
 input#toggle:checked ~ #show-menu .btn:nth-child(7) {
   top: 120px;
@@ -150,7 +163,11 @@ input#toggle:checked ~ #show-menu .btn:nth-child(7) {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-
+input#toggle:checked ~ #show-menu .btn:nth-child(7)::after,
+.btn:nth-child(8)::after,
+.btn:nth-child(9)::after {
+  right: 120px;
+}
 input#toggle:checked ~ #show-menu .btn:nth-child(8) {
   left: -180px;
   opacity: 1;
@@ -189,10 +206,9 @@ input#toggle:checked ~ #show-menu .btn .closeBtn {
   transform: translateY(0px);
   opacity: 1;
 }
-/* input#toggle:checked ~ #show-menu .btn:hover::after {
+input#toggle:checked ~ #show-menu .btn::after {
   content: attr(data-t);
-  left: 150px;
-  position: relative;
+  position: absolute !important;
   font-size: 24px;
   font-weight: 700;
   position: relative;
@@ -208,7 +224,7 @@ input#toggle:checked ~ #show-menu .btn .closeBtn {
   color: #22403e;
   text-align: center;
   white-space: nowrap;
-} */
+}
 input#toggle:checked ~ #show-menu .btn img {
   content: attr(title);
   left: -8px;

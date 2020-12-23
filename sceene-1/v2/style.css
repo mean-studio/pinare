@@ -17,6 +17,7 @@ g,
 .glowing-circle,
 .centered-button,
 .button,
+.btn,
 .rounded {
   cursor: url(cursor32.png), pointer;
 }

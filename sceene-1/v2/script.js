@@ -241,8 +241,10 @@ const scenes = {
     title: "Broth to Broth Transfer",
     video: "scene-15",
     next: () => {
-      showCompleteButton();
       displayTitle("scene-10");
+      setTimeout(() => {
+        showCompleteButton();
+      }, 1000);
     },
     previous: () => displayTitle("scene-9"),
     introNext: () => displayScene("scene-9"),
@@ -270,5 +272,7 @@ function showCompleteButton() {
 }
 function displayFinalScene() {
   player.classList.remove("visible");
-  finalScene.style.display = "grid";
+  setTimeout(() => {
+    finalScene.style.display = "block";
+  }, 500);
 }
