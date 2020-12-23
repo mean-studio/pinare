@@ -6,11 +6,14 @@
     <title>Aseptic Techniques in the Microbiology Lab</title>
 
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="menu.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body onload="showFirstScene()">
     <video  id="bgVideo" ><source  src='video/S1_2_v4.mp4' type="video/mp4"></video> 
     <div id='bgImage'  class="oHidden"></div>
-    <audio loop  id="au"><source src="bgmusic.mp3" type="audio/mpeg"></audio>
+    <audio loop  id="au"><source src="bgmusic.aac" type="audio/mpeg"></audio>
         <div class='rounded' id="toggle-music"  onclick="toggleMusic()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path id='mute-sound'  d="M11 5L6 9H2v6h4l5 4zM22 9l-6 6M16 9l6 6"/><g id='play-sound' style="display: none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></g></svg> </div>
     <scene id='intro'> 
         <div class='title'> Aseptic Techniques in the Microbiology Lab</div>
@@ -160,7 +163,43 @@
 </div>
     <div></div>
 </scene> 
-<embed src="img/scene18.svg" id='finalScene' width="100%" style="display: none;"></embed
+<!-- <embed src="img/scene18.svg" id='finalScene' width="100%" style="display: none;"></embed > -->
+    <div id='finalScene' style="display: none;"> <div class="menu" >
+        <input type="checkbox" id="toggle" />
+        <label id="show-menu" for="toggle">
+          <div class="btn">
+            <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
+            <i class="material-icons md-36 toggleBtn closeBtn">close</i>
+          </div>
+          <div class="btn"  data-t='Preparing Equipment and Work Bench' >
+            <img src='img/7539417F3673D037.png'/>
+          </div>
+          <div class="btn" data-t='Cleaning Hands'>
+            <img src='img/7539417F3673D035.png'/>
+          </div>
+          <div class="btn" data-t='Preparing Equipment and Work Bench'>
+            <img src='img/7539417F3673D03E.png'  />
+          </div>
+          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+            <img src='img/7539417F3673D030.png' />
+          </div>
+          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+            <img src='img/7539417F3673D031.png' />
+          </div>
+          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+            <img src='img/7539417F3673D032.png' />
+          </div>
+          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+            <img src='img/7539417F3673D033.png' />
+          </div>
+
+          <div class="btn" data-t='Preparing Equipment and Work Bench' >
+            <img src='img/7539417F3673D036.png' />
+          </div>
+
+        </label>
+      </div>
+    </div>
 </body>
 <script src='script.js'></script> 
 </html>
