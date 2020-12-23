@@ -76,6 +76,26 @@ g,
   transform: rotate(-90deg) scale(0.1);
   transition: all 1s;
 }
+/* .player::before {
+  font-size: 36px;
+  content: "<div><</div>";
+  height: 100%;
+  left: 15%;
+  position: absolute;
+  display: grid;
+  justify-self: center;
+  align-content: center;
+}
+.player::after {
+  font-size: 36px;
+  content: ">";
+  height: 100%;
+  right: 15%;
+  position: absolute;
+  display: grid;
+  justify-self: center;
+  align-content: center;
+} */
 .visible {
   position: absolute;
   transition: all 1.5s;

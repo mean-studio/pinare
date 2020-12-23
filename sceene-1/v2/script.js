@@ -76,7 +76,7 @@ function haveLookAround() {
     getStarted.style.right = "0";
     getStarted.style.margin = "50px 150px";
     getStarted.style.position = "absolute";
-  }, 0);
+  }, 7000);
   setHoverImages(overlay2);
   positionDescriptionBox(overlay2, 0.2, 0.1);
 }
