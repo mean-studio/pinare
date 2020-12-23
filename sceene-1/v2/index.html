@@ -161,42 +161,53 @@
 </div>
     <div></div>
 </scene> 
-<!-- <embed src="img/scene18.svg" id='finalScene' width="100%" style="display: none;"></embed > -->
     <div id='finalScene' style="display: none;"> <div class="menu" >
         <input type="checkbox" id="toggle" />
-        <label id="show-menu" for="toggle" onclick="console.log(event.target.getAttribute('data-t'))">
+        <label id="show-menu" for="toggle" >
           <div class="btn">
             <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
             <i class="material-icons md-36 toggleBtn closeBtn">close</i>
           </div>
-          <div class="btn"  data-t='Preparing Equipment and Work Bench' >
+          <div class="btn"  data-t='Preparing Equipment and Work Bench' data-video='scene-4' data-delay='0.2s' onclick="playVideo(event.currentTarget)" >
             <img src='img/7539417F3673D037.png'/>
           </div>
-          <div class="btn" data-t='Cleaning Hands'>
+          <div class="btn" data-t='Cleaning Hands' data-video='scene-6' data-delay='0.2s' onclick="playVideo(event.currentTarget)">
             <img src='img/7539417F3673D035.png'/>
           </div>
-          <div class="btn" data-t='Sterilizing Metal Inoculating Loop'>
+          <div class="btn" data-t='Sterilizing Metal Inoculating Loop' data-video='scene-8' data-delay='0.4s' onclick="playVideo(event.currentTarget)">
             <img src='img/7539417F3673D03E.png'  />
           </div>
-          <div class="btn" data-t='Plate Labeling' >
+          <div class="btn" data-t='Plate Labeling' data-video='scene-10' onclick="playVideo(event.currentTarget)" >
             <img src='img/7539417F3673D030.png' />
           </div>
-          <div class="btn" data-t='Broth to Plate Transfer' >
+          <div class="btn" data-t='Broth to Plate Transfer' data-video='scene-11' data-delay='0.5s' onclick="playVideo(event.currentTarget)">
            <img src='img/7539417F3673D033.png' />
           </div>
-          <div class="btn" data-t='Plate to Plate Transfer' >
+          <div class="btn" data-t='Plate to Plate Transfer' data-video='scene-13' data-delay='0.6s' onclick="playVideo(event.currentTarget)">
             <img src='img/7539417F3673D031.png' />
           </div>
-          <div class="btn" data-t='Broth to Broth Transfer' > 
+          <div class="btn" data-t='Broth to Broth Transfer' data-video='scene-15' data-delay='0.7s' onclick="playVideo(event.currentTarget)" > 
             <img src='img/7539417F3673D036.png' />
           </div>
 
-          <div class="btn" data-t='Cleaning Up' >  
+          <div class="btn" data-t='Cleaning Up' data-delay='0.8'onclick="playVideo(event.currentTarget)" >  
               <img src='img/7539417F3673D032.png' />
           </div>
         </label>
       </div>
     </div>
+    <div class='player' id='finalPlayer'>
+        <video height="85%" controls style="margin: auto;" id="videoPlayer" onended="showFinalOutro()">
+            <source  src='' type="video/mp4" >
+        </video>
+        <scene style="display: none;" id='outro'> 
+            <div class='title'> </div>
+  
+                <div class='button complete'  id='completeButton'   onclick="hideFinalPlayer()">Close <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+ 
+            <div></div>
+        </scene> 
+    </div> 
 </body>
 <script src='script.js'></script> 
 </html>

@@ -20,6 +20,8 @@ const overlay2 = document.querySelector("#overlay-2");
 const getStarted = overlay2.querySelector("#getStarted");
 const toggleMusicButton = document.querySelector("#toggle-music");
 const finalScene = document.querySelector("#finalScene");
+const finalPlayer = document.querySelector("#finalPlayer");
+const finalVideoPlayer = finalPlayer.querySelector("#videoPlayer");
 let au = document.querySelector(`#au`);
 function showFirstScene() {
   scene.classList.add("visible");
@@ -275,4 +277,25 @@ function displayFinalScene() {
   setTimeout(() => {
     finalScene.style.display = "block";
   }, 500);
+}
+function playVideo(target) {
+  const title = finalPlayer.querySelector(".title");
+  const videoSrc = finalVideoPlayer.querySelector("source");
+  videoSrc.src = `video/${target.getAttribute("data-video")}.mp4`;
+  finalPlayer.querySelector("#outro").style.display = "none";
+  finalVideoPlayer.load();
+  finalVideoPlayer.style.display = "block";
+  setTimeout(() => {
+    finalPlayer.classList.add("visible");
+    title.innerHTML = target.getAttribute("data-t");
+    finalVideoPlayer.play();
+  }, 500);
+}
+function showFinalOutro() {
+  finalVideoPlayer.style.display = "none";
+  finalPlayer.querySelector("#outro").style.display = "grid";
+}
+
+function hideFinalPlayer() {
+  finalPlayer.classList.remove("visible");
 }
