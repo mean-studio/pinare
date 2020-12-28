@@ -246,7 +246,10 @@ const scenes = {
   "scene-6": {
     title: "Plate Labeling",
     video: "scene-10",
-    next: () => displayTitle("scene-7"),
+    next: () => {
+      bgImage.classList.remove("oVisible");
+      displayTitle("scene-7");
+    },
     previous: () => displayTitle("scene-6"),
     introNext: () => displayScene("scene-6"),
     introPrevious: () => {
