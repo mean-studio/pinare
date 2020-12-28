@@ -123,7 +123,7 @@ scene,
   transition: all 1.5s;
 }
 scene > .title {
-  font-size: 46px;
+  font-size: 2vw;
   font-weight: 700;
   position: relative;
   border: 4px solid #bcbcbc;
@@ -134,7 +134,7 @@ scene > .title {
     rgba(219, 219, 219, 1) 0%,
     rgba(255, 255, 255, 1) 75%
   );
-  padding: 35px;
+  padding: 1vw;
   color: #22403e;
   width: 60%;
   text-align: center;
@@ -155,8 +155,8 @@ scene > .title {
   align-items: center;
   justify-items: center;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   line-height: 0;
   font-weight: 700;
   position: relative;
@@ -172,11 +172,10 @@ scene > .title {
   text-align: center;
 }
 button {
-  font-family: "Lato", sans-serif;
-  font-size: 36px;
+  font-size: 1.5vw;
   font-weight: 700;
   position: relative;
-  border: 7px solid #bcbcbc;
+  border: 5px solid #bcbcbc;
   border-radius: 50px;
   background: rgb(219, 219, 219);
   background: linear-gradient(
@@ -249,12 +248,11 @@ button {
   margin-left: 40vw;
   align-self: center;
   justify-self: center;
-  width: 20%;
   max-width: 200px;
   text-align: center;
 }
 .button {
-  font-size: 36px;
+  font-size: 1.5vw;
   font-weight: 600;
   position: relative;
   border: 7px solid #ccc;
@@ -265,7 +263,7 @@ button {
     rgba(219, 219, 219, 1) 0%,
     rgba(255, 255, 255, 1) 75%
   );
-  padding: 15px 35px;
+  padding: 15px;
   letter-spacing: -1px;
   white-space: nowrap;
   color: #de7001;
@@ -321,4 +319,18 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.skip-button {
+  position: absolute;
+  padding: 10px;
+  width: 120px !important;
+  border-radius: 20px;
+  opacity: 0.5;
+  min-width: unset;
+  margin: 0;
+  bottom: 0%;
+  right: 1%;
+}
+.skip-button:hover {
+  opacity: 1;
 }

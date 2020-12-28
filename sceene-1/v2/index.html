@@ -13,11 +13,11 @@
 <body onload="showFirstScene()">
     <video  id="bgVideo" ><source  src='video/S1_2_v4.mp4' type="video/mp4"></video> 
     <div id='bgImage'  class="oHidden"></div>
-    <audio loop  id="au"><source src="bgmusic.aac" type="audio/mpeg"></audio>
+    <audio loop  id="au"><source src="bgmusic.mp3" type="audio/mpeg"></audio>
         <div class='rounded' id="toggle-music"  onclick="toggleMusic()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path id='mute-sound'  d="M11 5L6 9H2v6h4l5 4zM22 9l-6 6M16 9l6 6"/><g id='play-sound' style="display: none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></g></svg> </div>
     <scene id='intro'> 
         <div class='title'> Aseptic Techniques in the Microbiology Lab</div>
-       <div class='rounded'  onclick="start()"> <svg  style="transform: scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#398905" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
+       <div class='rounded material-icons'  onclick="start()"><i class="material-icons md-48"> play_arrow </i></div>
         <div></div>
 
     </scene> 
@@ -141,14 +141,16 @@
 <div class='player'>
     <video height="85%" controls style="margin: auto;" id="videoPlayer" onended="showOutro()">
         <source  src='' type="video/mp4" >
-    </video>
+        </video>
+        <div class='button  skip-button'   id='skipButton' style="display: none;" onclick="skipVideo()">Skip<i class="material-icons button-icon"> skip_next
+        </i></div>
     <scene style="display: none;" id='outro'> 
         <div class='title'> </div>
        <div class='rounded'  onclick="restartVideo()"> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg></div>
        <div class="button-wrapper">
-        <div class='button' id='previousButton'><svg style=" transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
-        <div class='button' id='nextButton'>Next <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
-    <div class='button complete'  id='completeButton' style="display: none;" onclick="displayFinalScene()">Complete <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div class='button' id='previousButton'>  <i class="material-icons button-icon"> arrow_back_ios </i>Previous</div>
+        <div class='button' id='nextButton'>Next  <i class="material-icons button-icon"> arrow_forward_ios </i></div>
+    <div class='button complete'  id='completeButton' style="display: none;" onclick="displayFinalScene()">Complete  <i class="material-icons button-icon"> done </i></div>
 </div> 
         <div></div>
     </scene> 
@@ -156,8 +158,8 @@
 <scene id='titleScene'> 
     <div class='title'></div>
    <div class="button-wrapper">
-    <div class='button' id='previousButton'><svg style=" transform: translate(-5px, 5px) scale(1.2);" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>Previous</div>
-    <div class='button' id='nextButton'>Next <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></div>
+    <div class='button' id='previousButton'> <i class="material-icons button-icon"> arrow_back_ios </i>Previous</div>
+    <div class='button' id='nextButton'>Next  <i class="material-icons button-icon"> arrow_forward_ios </i></div>
 </div>
     <div></div>
 </scene> 
@@ -189,7 +191,6 @@
           <div class="btn" data-t='Broth to Broth Transfer' data-video='scene-15' data-delay='0.7s' onclick="playVideo(event.currentTarget)" > 
             <img src='img/7539417F3673D036.png' />
           </div>
-
           <div class="btn" data-t='Cleaning Up'  data-video='scene-17' data-delay='0.8'onclick="playVideo(event.currentTarget)" >  
               <img src='img/7539417F3673D032.png' />
           </div>
@@ -202,9 +203,7 @@
         </video>
         <scene style="display: none;" id='outro'> 
             <div class='title'> </div>
-  
                 <div class='button complete'  id='completeButton'   onclick="hideFinalPlayer()">Close <svg style="transform: translate(5px, 5px) scale(1.2);"  xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
- 
             <div></div>
         </scene> 
     </div> 

@@ -6,6 +6,7 @@ const videoPlayer = document.querySelector("#videoPlayer");
 const videoSrc = videoPlayer.querySelector("source");
 const scene = document.querySelector("#intro");
 const outro = document.querySelector("#outro");
+const skipButton = document.querySelector("#skipButton");
 const outroPreviousButton = outro.querySelector("#previousButton");
 const outroNextButton = outro.querySelector("#nextButton");
 const completeButton = outro.querySelector("#completeButton");
@@ -22,6 +23,7 @@ const toggleMusicButton = document.querySelector("#toggle-music");
 const finalScene = document.querySelector("#finalScene");
 const finalPlayer = document.querySelector("#finalPlayer");
 const finalVideoPlayer = finalPlayer.querySelector("#videoPlayer");
+
 let au = document.querySelector(`#au`);
 function showFirstScene() {
   scene.classList.add("visible");
@@ -129,10 +131,14 @@ function displayScene(sceneName) {
     videoSrc.src = `video/${scenes[sceneName].video}.mp4`;
     videoPlayer.load();
     restartVideo();
+    setTimeout(() => {
+      skipButton.style.display = "block";
+    }, 1500);
   }, 500);
 }
 function showOutro() {
   videoPlayer.style.display = "none";
+  skipButton.style.display = "none";
   outro.style.display = "grid";
 }
 function restartVideo() {
@@ -187,7 +193,16 @@ const scenes = {
     bgVideoBackward: "s4_5_transition_r",
     title: "Cleaning Hands",
     video: "scene-6",
-    next: () => displayTitle("scene-5"),
+    next: () => {
+      titleScene.classList.remove("visible");
+      bgVideoSrc.src = "video/s4_5_transition_r.mp4";
+      bgVideo.load();
+      bgVideo.play();
+      hidePlayer();
+      bgVideo.onended = () => {
+        displayTitle("scene-5");
+      };
+    },
     previous: () => displayTitle("scene-4"),
     introNext: () => displayScene("scene-4"),
     introPrevious: () => {
@@ -274,9 +289,13 @@ function showCompleteButton() {
 }
 function displayFinalScene() {
   player.classList.remove("visible");
-  setTimeout(() => {
+  bgImage.classList.remove("oVisible");
+  bgVideoSrc.src = "video/final_scene.mp4";
+  bgVideo.load();
+  bgVideo.play();
+  bgVideo.onended = () => {
     finalScene.style.display = "block";
-  }, 500);
+  };
 }
 function playVideo(target) {
   const title = finalPlayer.querySelector(".title");
@@ -298,4 +317,7 @@ function showFinalOutro() {
 
 function hideFinalPlayer() {
   finalPlayer.classList.remove("visible");
+}
+function skipVideo() {
+  videoPlayer.currentTime = videoPlayer.duration;
 }
