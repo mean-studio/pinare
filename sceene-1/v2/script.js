@@ -263,7 +263,10 @@ const scenes = {
     next: () => displayTitle("scene-8"),
     previous: () => displayTitle("scene-7"),
     introNext: () => displayScene("scene-7"),
-    introPrevious: () => displayScene("scene-6"),
+    introPrevious: () => {
+      bgImage.classList.add("oVisible");
+      displayScene("scene-6");
+    },
   },
   "scene-8": {
     title: "Plate to Plate Transfer",
@@ -278,9 +281,6 @@ const scenes = {
     video: "scene-15",
     next: () => {
       displayTitle("scene-10");
-      setTimeout(() => {
-        showCompleteButton();
-      }, 1000);
     },
     previous: () => displayTitle("scene-9"),
     introNext: () => displayScene("scene-9"),
@@ -294,7 +294,10 @@ const scenes = {
       hideCompleteButton();
       displayTitle("scene-10");
     },
-    introNext: () => displayScene("scene-10"),
+    introNext: () => {
+      displayScene("scene-10");
+      showCompleteButton();
+    },
     introPrevious: () => displayScene("scene-9"),
   },
 };
