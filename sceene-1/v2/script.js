@@ -27,8 +27,15 @@ const finalVideoPlayer = finalPlayer.querySelector("#videoPlayer");
 let au = document.querySelector(`#au`);
 function showFirstScene() {
   scene.classList.add("visible");
+  preloadBgVideo("s4_5_transition");
 }
-
+function preloadBgVideo(url) {
+  const prloadVideo = document.createElement("video");
+  const videoSrc = document.createElement("source");
+  prloadVideo.appendChild(videoSrc);
+  videoSrc.src = `video/${url}.mp4`;
+  prloadVideo.load();
+}
 function start() {
   scene.classList.remove("visible");
   setTimeout(() => {
@@ -177,6 +184,7 @@ const scenes = {
       bgVideo.play();
       bgVideo.onended = () => {
         displayTitle("scene-4");
+        preloadBgVideo("s4_5_transition_r");
       };
     },
     previous: () => displayTitle("scene-3"),
@@ -223,9 +231,17 @@ const scenes = {
       bgImage.classList.add("oVisible");
       displayTitle("scene-6");
     },
-    previous: () => displayTitle("scene-5"),
+    previous: () => displayScene("scene-5"),
     introNext: () => displayScene("scene-5"),
-    introPrevious: () => displayScene("scene-4"),
+    introPrevious: () => {
+      titleScene.classList.remove("visible");
+      bgVideoSrc.src = "video/s4_5_transition.mp4";
+      bgVideo.load();
+      bgVideo.play();
+      bgVideo.onended = () => {
+        displayTitle("scene-4");
+      };
+    },
   },
   "scene-6": {
     title: "Plate Labeling",

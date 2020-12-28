@@ -160,7 +160,7 @@ scene > .title {
   line-height: 0;
   font-weight: 700;
   position: relative;
-  border: 7px solid #bcbcbc;
+  border: 5px solid #bcbcbc;
   background: rgb(219, 219, 219);
   background: linear-gradient(
     0deg,
